@@ -1,0 +1,29 @@
+//sorting array of object
+
+//Sorting using string key
+function sortArrayStringValue(arr){
+  console.log(arr.sort(function(a,b){return a.name > b.name}));
+}
+
+//Sorting using integer key
+function sortArrayIntValue(arr){
+  console.log(arr.sort(function(a,b){return a.age - b.age}));
+}
+
+//initialize
+var x = [{
+        "name": "Maabbccx",
+        "age": 29
+    },
+    {
+        "name": "Maabbccz",
+        "age": 25
+    },
+    {
+        "name": "Maabbccy",
+        "age": 31
+    }
+];
+
+sortArrayStringValue(x);
+sortArrayIntValue(x);
