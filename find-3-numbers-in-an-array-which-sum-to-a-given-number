@@ -1,0 +1,29 @@
+//find 3 numbers in an array which sum to a given number
+
+function findTriplet(arr, sum){
+	var arrSize = arr.length,
+		last, first;	
+	for(var i = 0; i < arrSize - 2; i++){
+		last = arrSize - 1; // index of the last element
+		first = i + 1; // index of the first element in the remaining nextElementSibling
+		while (first < last){
+			if(arr[i] + arr[first] + arr[last] == sum){
+				console.log(arr[i]+" + "+arr[first]+" + "+arr[last]+" = "+sum);
+				return true;
+			}
+			else if(arr[i] + arr[first] + arr[last] < sum){
+				first++;
+			}
+			else{
+				last--;
+			}
+		}
+	}
+	console.log("No triplet found");
+	return false;
+}
+
+//initialize
+var a = [1,4,6,10,20,21];
+findTriplet(a,35);
+findTriplet(a,65);
