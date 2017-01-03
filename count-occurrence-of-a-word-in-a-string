@@ -1,0 +1,22 @@
+//count occurrence of a word in a string
+
+//using single word
+function findOccurenceSingle(str,word){  
+  console.log(word, str.match(new RegExp(word, "g")).length);
+}
+
+//using array of words
+function findOccurenceMultiple(str,wordArr){
+  for(var i = 0; i < wordArr.length; i++){
+    console.log(wordArr[i], str.match(new RegExp(wordArr[i], "g")).length);
+  }
+}
+
+//initiate
+var x = 'abcdefamamaknockhihihihi';
+var y = 'ama'
+var z = ['ama','knock','hi'];
+console.log('using single word');
+findOccurenceSingle(x,y);
+console.log('using array of words');
+findOccurenceMultiple(x,z);
